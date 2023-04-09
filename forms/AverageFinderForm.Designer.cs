@@ -1,6 +1,6 @@
 ﻿namespace AverageFinder
 {
-    partial class Form_Main
+    partial class AverageFinderForm
     {
         /// <summary>
         /// Required designer variable.
