@@ -33,8 +33,8 @@
             this.TotalMarksTextBox = new System.Windows.Forms.TextBox();
             this.NoOfSubjectsTextBox = new System.Windows.Forms.TextBox();
             this.FindAverageBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.AverageValue = new System.Windows.Forms.Label();
+            this.Average = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TotalMarks
@@ -82,16 +82,6 @@
             this.FindAverageBtn.UseVisualStyleBackColor = true;
             this.FindAverageBtn.Click += new System.EventHandler(this.FindAverageBtn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(71, 237);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Average";
-            // 
             // AverageValue
             // 
             this.AverageValue.AutoSize = true;
@@ -102,21 +92,31 @@
             this.AverageValue.TabIndex = 6;
             this.AverageValue.Text = "0";
             // 
-            // Form_Main
+            // Average
+            // 
+            this.Average.AutoSize = true;
+            this.Average.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Average.Location = new System.Drawing.Point(92, 238);
+            this.Average.Name = "Average";
+            this.Average.Size = new System.Drawing.Size(88, 24);
+            this.Average.TabIndex = 7;
+            this.Average.Text = "Average";
+            // 
+            // AverageFinderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 330);
+            this.Controls.Add(this.Average);
             this.Controls.Add(this.AverageValue);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.FindAverageBtn);
             this.Controls.Add(this.NoOfSubjectsTextBox);
             this.Controls.Add(this.TotalMarksTextBox);
             this.Controls.Add(this.NoOfSubjects);
             this.Controls.Add(this.TotalMarks);
-            this.Name = "Form_Main";
+            this.Name = "AverageFinderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "AverageFinder";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,8 +129,8 @@
         private System.Windows.Forms.TextBox TotalMarksTextBox;
         private System.Windows.Forms.TextBox NoOfSubjectsTextBox;
         private System.Windows.Forms.Button FindAverageBtn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label AverageValue;
+        private System.Windows.Forms.Label Average;
     }
 }
 

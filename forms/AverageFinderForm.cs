@@ -3,31 +3,33 @@ using System.Windows.Forms;
 
 namespace AverageFinder
 {
-    public partial class AverageFinderForm : Form
+    public partial class AverageFinderForm : Form, IAverageFinderForm
     {
+        private readonly AverageFinderPresenter presenter;
         public AverageFinderForm()
         {
             InitializeComponent();
+            presenter = new AverageFinderPresenter(this); 
         }
 
-        public string totalMarks {
-            get => TotalMarksTextBox.Text;
+        string IAverageFinderForm.TotalMarks { 
+            get => TotalMarksTextBox.Text; 
             set => TotalMarks.Text = value; 
         }
 
-        public string noOfSubjects {
+        string IAverageFinderForm.NoOfSubjects { 
             get => NoOfSubjectsTextBox.Text; 
-            set => NoOfSubjects.Text = value;
+            set => NoOfSubjects.Text = value; 
         }
 
-        public event EventHandler averageBtnClicked;
+        string IAverageFinderForm.AverageValue { 
+            get => AverageValue.Text; 
+            set => AverageValue.Text = value; 
+        }
 
         private void FindAverageBtn_Click(object sender, EventArgs e)
         {
-            Int32.TryParse(totalMarks, out int _totalMarks);
-            Int32.TryParse(noOfSubjects, out int _noOfSubjects);
-            float average = (float)_totalMarks / _noOfSubjects;
-            AverageValue.Text = average.ToString();
+            presenter.PerformAverage();
         }
     }
 }

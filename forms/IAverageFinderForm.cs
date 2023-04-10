@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace AverageFinder
+﻿namespace AverageFinder
 {
     public interface IAverageFinderForm
     {
-        string totalMarks { get; set; }
-        string noOfSubjects { get; set; }
-        event EventHandler averageBtnClicked;
+        string TotalMarks { get; set; }
+        string NoOfSubjects { get; set; }
+        string AverageValue { get; set; }
     }
 }
